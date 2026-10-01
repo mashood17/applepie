@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-ivory: #F7F4EE;
+    --color-ivory-warm: #FAF8F4;
+    --color-charcoal: #1D1D1B;
+    --color-charcoal-light: #2A2A27;
+    --color-charcoal-deep: #131312;
+    --color-gold: #B08A52;
+    --color-gold-light: #C9A56E;
+    --color-gold-dark: #8F6C38;
+    --color-beige: #EDE6DA;
+    --color-beige-subtle: #F2ECE1;
+    --color-text-main: #242424;
+    --color-text-muted: #6E6A63;
+    --color-border-subtle: #E2DACD;
+  }
+
+  * {
+    border-color: var(--color-border-subtle);
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-text-main);
+    font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif), Georgia, serif;
+    letter-spacing: -0.015em;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom scrollbar for desktop */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1D1D1B;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3B3832;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B08A52;
+  }
+}
+
+/* Editorial line decorative */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(176, 138, 82, 0) 0%, rgba(176, 138, 82, 0.45) 50%, rgba(176, 138, 82, 0) 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #D4AF77 0%, #B08A52 50%, #8F6C38 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Smooth media loading */
+img {
+  content-visibility: auto;
+}
+
+/* Glassmorphism helpers */
+.glass-nav-light {
+  background: rgba(247, 244, 238, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-nav-dark {
+  background: rgba(29, 29, 27, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
