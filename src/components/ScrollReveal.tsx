@@ -18,9 +18,9 @@ export default function ScrollReveal({
   className = "",
   delay = 0,
   direction = "up",
-  distance = 24,
-  duration = 0.7,
-  once = false, // Set to false to support re-entry reveals smoothly
+  distance = 14, // Subtle, calm distance to avoid jarring jumps
+  duration = 0.5, // Crisp, natural duration
+  once = true, // Prevents glitchy re-triggers while scrolling
 }: ScrollRevealProps) {
   const shouldReduceMotion = useReducedMotion();
 
@@ -50,13 +50,12 @@ export default function ScrollReveal({
       }}
       viewport={{
         once,
-        amount: 0.15,
-        margin: "-40px 0px -40px 0px",
+        amount: 0.1,
       }}
       transition={{
         duration,
         delay,
-        ease: [0.22, 1, 0.36, 1], // Luxury cubic ease-out
+        ease: [0.25, 0.1, 0.25, 1], // Smooth natural ease
       }}
       className={className}
     >

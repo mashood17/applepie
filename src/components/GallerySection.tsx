@@ -145,19 +145,11 @@ export default function GallerySection() {
         </div>
 
         {/* Editorial Asymmetrical Grid */}
-        <motion.div
-          layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5">
           {filteredItems.map((item, index) => (
-            <motion.div
-              layout
+            <div
               key={item.id}
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.96 }}
-              transition={{ duration: 0.4 }}
-              className={`group relative rounded-2xl overflow-hidden shadow-sm bg-[#1D1D1B] cursor-pointer min-h-[260px] ${
+              className={`group relative rounded-2xl overflow-hidden shadow-sm bg-[#1D1D1B] cursor-pointer min-h-[260px] transition-all duration-300 hover:-translate-y-1 ${
                 activeFilter === "All" && item.span ? item.span : "lg:col-span-4"
               }`}
               onClick={() => setLightboxIndex(index)}
@@ -188,9 +180,9 @@ export default function GallerySection() {
                   <Maximize2 size={14} />
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
 
       {/* Lightbox Modal */}
