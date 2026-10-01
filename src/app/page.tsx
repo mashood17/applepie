@@ -6,7 +6,6 @@ import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
 import LocationsSection from "@/components/LocationsSection";
 import RoomSection from "@/components/RoomSection";
-import AmenitiesSection from "@/components/AmenitiesSection";
 import GallerySection from "@/components/GallerySection";
 import ReviewsSection from "@/components/ReviewsSection";
 import PlanYourStaySection from "@/components/PlanYourStaySection";
@@ -90,13 +89,10 @@ export default function Home() {
         onSelectLocationForEnquiry={handleSelectLocation}
       />
 
-      {/* 5. Stay / Room Showcase (A Comfortable Place to Stay) */}
+      {/* 5. Stay / Room & Essential Amenities Showcase */}
       <RoomSection onOpenBooking={() => setIsBookingOpen(true)} />
 
-      {/* 6. Essential Amenities Across Applepie */}
-      <AmenitiesSection />
-
-      {/* 7. Gallery Grid & Lightbox */}
+      {/* 6. Gallery Grid & Lightbox */}
       <GallerySection />
 
       {/* 9. Verified Guest Reviews & Google Rating */}

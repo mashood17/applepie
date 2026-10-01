@@ -85,7 +85,6 @@ export default function SplashAndNavbar({
     { label: "About", href: "#about" },
     { label: "Locations", href: "#locations" },
     { label: "Stay", href: "#stay" },
-    { label: "Amenities", href: "#amenities" },
     { label: "Gallery", href: "#gallery" },
     { label: "Reviews", href: "#reviews" },
     { label: "Contact", href: "#contact" },
