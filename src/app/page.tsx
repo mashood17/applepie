@@ -7,7 +7,6 @@ import AboutSection from "@/components/AboutSection";
 import LocationsSection from "@/components/LocationsSection";
 import RoomSection from "@/components/RoomSection";
 import AmenitiesSection from "@/components/AmenitiesSection";
-import HospitalityMoment from "@/components/HospitalityMoment";
 import GallerySection from "@/components/GallerySection";
 import ReviewsSection from "@/components/ReviewsSection";
 import PlanYourStaySection from "@/components/PlanYourStaySection";
@@ -97,10 +96,7 @@ export default function Home() {
       {/* 6. Essential Amenities Across Applepie */}
       <AmenitiesSection />
 
-      {/* 7. Hospitality Moment (Campaign Editorial) */}
-      <HospitalityMoment />
-
-      {/* 8. Gallery Grid & Lightbox */}
+      {/* 7. Gallery Grid & Lightbox */}
       <GallerySection />
 
       {/* 9. Verified Guest Reviews & Google Rating */}
